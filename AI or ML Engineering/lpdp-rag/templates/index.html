@@ -1,0 +1,306 @@
+{% extends "base.html" %}
+
+{% block title %}LPDP Scholarship AI Assistant{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-secondary-500 to-primary-500 text-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="text-center lg:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    LPDP Scholarship AI Assistant
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-white opacity-90">
+                    Temukan informasi lengkap tentang Beasiswa LPDP 2025
+                    dengan bantuan AI yang didukung dokumen resmi.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="{{ url_for('chat') }}" 
+                       class="inline-block bg-white text-secondary-600 font-semibold px-8 py-3 rounded-lg hover:bg-primary-500 hover:text-white transition-colors">
+                        <i class="fas fa-comments mr-2"></i>Tanya AI Assistant
+                    </a>
+                    <a href="{{ url_for('about') }}" 
+                       class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-secondary-600 transition-colors">
+                        <i class="fas fa-info-circle mr-2"></i>Pelajari Selengkapnya
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-secondary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-white"></i>
+                            </div>
+                            <div class="bg-gray-100 rounded-lg p-3 flex-grow">
+                                <p class="text-gray-800">Halo! 👋 Apa yang ingin kamu ketahui tentang Beasiswa LPDP 2025?</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex">
+                            <input type="text" placeholder="Tanya tentang persyaratan, pendaftaran, dll..." 
+                                   class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-secondary-500 focus:outline-none">
+                            <button class="bg-secondary-500 text-white px-4 py-2 rounded-r-lg hover:bg-secondary-600 transition-colors"
+                                    onclick="redirectToChat()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm">Persyaratan</span>
+                            <span class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm">Pendaftaran</span>
+                            <span class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm">Deadline</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Disclaimer on Hero -->
+        <div class="mt-8 text-center bg-black bg-opacity-20 p-3 rounded-lg">
+            <p class="text-white text-sm">
+                <i class="fas fa-exclamation-triangle mr-1"></i>
+                <strong>Disclaimer:</strong> Website ini BUKAN situs resmi LPDP. Untuk informasi resmi, kunjungi 
+                <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" class="underline hover:text-primary-300">
+                    lpdp.kemenkeu.go.id
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Cara AI Assistant Membantu Anda</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Dapatkan informasi akurat tentang Beasiswa LPDP 2025 melalui teknologi AI yang didukung oleh 22 dokumen resmi LPDP.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-gray-50 rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-search text-2xl text-secondary-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Temukan Informasi Cepat</h3>
+                <p class="text-gray-600">
+                    Dapatkan jawaban instan untuk pertanyaan tentang persyaratan, jadwal, pendaftaran,
+                    dan semua informasi terkait Beasiswa LPDP 2025.
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-gray-50 rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-file-alt text-2xl text-primary-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Berbasis Dokumen Resmi</h3>
+                <p class="text-gray-600">
+                    Semua jawaban didasarkan pada 22 dokumen resmi LPDP sehingga Anda mendapatkan
+                    informasi yang akurat dan terpercaya.
+                </p>
+                <div class="mt-4">
+                    <a href="{{ url_for('about', _anchor='sumber') }}" class="text-secondary-600 hover:underline">
+                        <i class="fas fa-external-link-alt mr-1"></i> Lihat Dokumen Resmi
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="bg-gray-50 rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-bolt text-2xl text-yellow-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Dukungan 24/7</h3>
+                <p class="text-gray-600">
+                    Akses informasi kapan saja, di mana saja. AI Assistant tersedia 24/7
+                    untuk membantu persiapan aplikasi beasiswa Anda.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Start Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Pertanyaan Umum</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Beberapa pertanyaan populer tentang Beasiswa LPDP yang dapat Anda tanyakan kepada AI Assistant.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Quick Start Card 1 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Apa saja persyaratan untuk mendaftar Beasiswa LPDP 2025?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Persyaratan Pendaftaran</h3>
+                <p class="text-gray-600 mb-4">
+                    Informasi tentang syarat-syarat yang harus dipenuhi untuk mendaftar Beasiswa LPDP 2025.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Start Card 2 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Bagaimana tahapan seleksi Beasiswa LPDP 2025?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Tahapan Seleksi</h3>
+                <p class="text-gray-600 mb-4">
+                    Penjelasan lengkap tentang proses dan tahapan seleksi Beasiswa LPDP 2025.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Start Card 3 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Apa saja dokumen yang perlu disiapkan untuk pendaftaran LPDP 2025?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Dokumen Pendaftaran</h3>
+                <p class="text-gray-600 mb-4">
+                    Daftar dokumen-dokumen yang perlu dipersiapkan untuk proses pendaftaran.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Start Card 4 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Apa saja jenis beasiswa LPDP yang tersedia?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Jenis Beasiswa</h3>
+                <p class="text-gray-600 mb-4">
+                    Informasi tentang jenis-jenis beasiswa yang ditawarkan oleh LPDP dan perbedaannya.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Start Card 5 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Berapa nilai pembiayaan yang diberikan oleh Beasiswa LPDP?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Komponen Pembiayaan</h3>
+                <p class="text-gray-600 mb-4">
+                    Detail komponen pembiayaan yang ditanggung oleh Beasiswa LPDP.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Start Card 6 -->
+            <div class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow cursor-pointer"
+                 onclick="sendQuestionToChat('Kapan jadwal pendaftaran Beasiswa LPDP 2025?')">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Jadwal Pendaftaran</h3>
+                <p class="text-gray-600 mb-4">
+                    Informasi tentang jadwal dan timeline pendaftaran Beasiswa LPDP 2025.
+                </p>
+                <div class="flex justify-end">
+                    <div class="text-secondary-500 hover:text-secondary-600">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About LPDP Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+            <div class="lg:col-span-2">
+                <img src="{{ url_for('static', filename='images/Logo_resmi_LPDP.png')}}" 
+                     alt="LPDP Scholarship" class="rounded-xl shadow-md">
+                <p class="text-xs text-gray-500 mt-2 text-center italic">Sumber: lpdp.kemenkeu.go.id</p>
+            </div>
+            <div class="lg:col-span-3">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Tentang LPDP</h2>
+                <div class="prose prose-lg text-gray-600 max-w-none">
+                    <p>
+                        Lembaga Pengelola Dana Pendidikan (LPDP) adalah lembaga yang dibentuk berdasarkan
+                        Undang-Undang Republik Indonesia untuk mengelola dana abadi pendidikan. Salah satu program
+                        utamanya adalah pemberian beasiswa pascasarjana bagi warga negara Indonesia yang ingin
+                        melanjutkan studi baik di dalam maupun luar negeri.
+                    </p>
+                    <p>
+                        LPDP berkomitmen untuk menghasilkan sumber daya manusia Indonesia yang unggul dan berdaya
+                        saing global, serta berkontribusi pada pembangunan Indonesia. Melalui berbagai program 
+                        beasiswanya, LPDP telah mengirim ribuan putra-putri terbaik bangsa untuk belajar di
+                        universitas-universitas terkemuka di seluruh dunia.
+                    </p>
+                    <div class="flex justify-start mt-6">
+                        <a href="{{ url_for('about') }}" 
+                           class="inline-block bg-secondary-500 text-white px-6 py-2 rounded-lg hover:bg-secondary-600 transition-colors">
+                            <i class="fas fa-info-circle mr-2"></i>Baca selengkapnya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-secondary-600 text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Siap untuk Mulai?
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+            Temukan informasi lengkap tentang Beasiswa LPDP 2025 dan mulai persiapkan
+            aplikasi terbaik Anda bersama AI Assistant kami.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{{ url_for('chat') }}" 
+               class="inline-block bg-white text-secondary-600 font-semibold px-8 py-3 rounded-lg hover:bg-primary-500 hover:text-white transition-colors">
+                <i class="fas fa-comments mr-2"></i>Mulai Chat dengan AI
+            </a>
+        </div>
+    </div>
+</section>
+
+{% block extra_js %}
+<script>
+    function redirectToChat() {
+        const questionInput = document.querySelector('input[placeholder="Tanya tentang persyaratan, pendaftaran, dll..."]');
+        if (questionInput && questionInput.value.trim()) {
+            localStorage.setItem('prefilledQuestion', questionInput.value.trim());
+        }
+        window.location.href = "{{ url_for('chat') }}";
+    }
+    
+    function sendQuestionToChat(question) {
+        localStorage.setItem('prefilledQuestion', question);
+        window.location.href = "{{ url_for('chat') }}";
+    }
+    
+    // Add event listener to the input field for Enter key
+    document.addEventListener('DOMContentLoaded', function() {
+        const questionInput = document.querySelector('input[placeholder="Tanya tentang persyaratan, pendaftaran, dll..."]');
+        if (questionInput) {
+            questionInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToChat();
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

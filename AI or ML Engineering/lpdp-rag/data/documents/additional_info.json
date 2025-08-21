@@ -1,0 +1,44 @@
+{
+  "contact_information": {
+    "customer_service": {
+      "phone": "+62-21-23507011",
+      "email": "cs@lpdp.kemenkeu.go.id",
+      "website": "https://lpdp.kemenkeu.go.id",
+      "operating_hours": "Senin - Jumat: 08:00 - 17:00 WIB"
+    },
+    "address": {
+      "head_office": "Gedung Danadyaksa Cikini, Jalan Cikini Raya No.91A-D, Menteng, Jakarta Pusat 10330",
+      "postal_code": "10330",
+      "province": "DKI Jakarta"
+    }
+  },
+  "social_media": {
+    "facebook": "https://www.facebook.com/lpdp.ri",
+    "twitter": "https://twitter.com/LPDP_RI",
+    "instagram": "https://www.instagram.com/lpdp_ri/",
+    "youtube": "https://www.youtube.com/c/LPDPRIofficial",
+    "linkedin": "https://www.linkedin.com/company/lpdp-kemenkeu"
+  },
+  "important_dates_2025": {
+    "registration_periods": [
+      {
+        "batch": "Batch 1",
+        "registration_start": "2025-01-15",
+        "registration_end": "2025-02-28",
+        "announcement": "2025-04-30"
+      },
+      {
+        "batch": "Batch 2", 
+        "registration_start": "2025-06-01",
+        "registration_end": "2025-07-31",
+        "announcement": "2025-09-30"
+      }
+    ]
+  },
+  "scholarship_statistics": {
+    "total_awardees_since_2013": "18000+",
+    "countries_covered": "45+",
+    "universities_partnered": "300+",
+    "fields_of_study": "100+"
+  }
+}

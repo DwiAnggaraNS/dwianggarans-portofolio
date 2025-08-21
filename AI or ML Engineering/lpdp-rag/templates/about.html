@@ -1,0 +1,464 @@
+{% extends "base.html" %}
+
+{% block title %}Tentang Program - Beasiswa LPDP{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-secondary-500 to-primary-500 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Tentang Beasiswa LPDP
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                Program beasiswa unggulan pemerintah Indonesia untuk pendidikan
+                pascasarjana bagi putra-putri terbaik bangsa.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Program Overview -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Apa itu Beasiswa LPDP?
+                </h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    Lembaga Pengelola Dana Pendidikan (LPDP) adalah lembaga yang dibentuk berdasarkan
+                    Undang-Undang Republik Indonesia untuk mengelola dana abadi pendidikan. Salah satu program
+                    utamanya adalah pemberian beasiswa pascasarjana bagi warga negara Indonesia yang ingin
+                    melanjutkan studi baik di dalam maupun luar negeri.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 text-xl mr-3 mt-1"></i>
+                        <p class="text-gray-700">
+                            <strong>Pendidikan Unggul:</strong> Kesempatan studi di perguruan tinggi
+                            terbaik di dalam dan luar negeri.
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 text-xl mr-3 mt-1"></i>
+                        <p class="text-gray-700">
+                            <strong>Pembiayaan Komprehensif:</strong> Beasiswa penuh yang mencakup biaya
+                            pendidikan dan biaya hidup.
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 text-xl mr-3 mt-1"></i>
+                        <p class="text-gray-700">
+                            <strong>Pengembangan Kepemimpinan:</strong> Program pengembangan soft skill
+                            dan kepemimpinan untuk mempersiapkan pemimpin masa depan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="bg-gray-100 rounded-2xl p-8">
+                    <i class="fas fa-graduation-cap text-6xl text-secondary-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        Investasi untuk Masa Depan Bangsa
+                    </h3>
+                    <p class="text-gray-600">
+                        LPDP berkomitmen untuk menghasilkan sumber daya manusia
+                        Indonesia yang unggul dan berdaya saing global, serta
+                        berkontribusi pada pembangunan Indonesia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Disclaimer Section -->
+<section class="py-8 bg-yellow-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white border border-yellow-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-exclamation-triangle text-2xl text-yellow-500"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Disclaimer Penting</h3>
+                    <p class="text-gray-700 mb-4">
+                        Website ini <strong>BUKAN</strong> website resmi LPDP dan tidak berafiliasi dengan 
+                        Lembaga Pengelola Dana Pendidikan. Situs ini dibuat sebagai alat bantu pencarian informasi 
+                        untuk calon pendaftar beasiswa LPDP 2025.
+                    </p>
+                    <p class="text-gray-700">
+                        Untuk informasi resmi dan terkini, selalu kunjungi website resmi LPDP di 
+                        <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" 
+                           class="text-secondary-600 font-semibold hover:underline">lpdp.kemenkeu.go.id</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Features -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Jenis Beasiswa LPDP
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                LPDP menawarkan berbagai jenis beasiswa untuk memenuhi beragam kebutuhan pendidikan 
+                dan pengembangan SDM Indonesia.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-soft hover:shadow-medium transition-shadow">
+                <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-globe-asia text-2xl text-primary-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Beasiswa Reguler
+                </h3>
+                <p class="text-gray-600">
+                    Program beasiswa untuk pendidikan pascasarjana (S2/S3) baik di dalam maupun 
+                    luar negeri dengan berbagai bidang studi prioritas.
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-soft hover:shadow-medium transition-shadow">
+                <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-landmark text-2xl text-secondary-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Beasiswa Targeted
+                </h3>
+                <p class="text-gray-600">
+                    Program beasiswa yang ditargetkan untuk bidang-bidang khusus sesuai 
+                    kebutuhan pembangunan nasional dan daerah.
+                </p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-xl p-6 shadow-soft hover:shadow-medium transition-shadow">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-users text-2xl text-yellow-600"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                    Beasiswa Afirmasi
+                </h3>
+                <p class="text-gray-600">
+                    Program beasiswa khusus untuk daerah 3T (Terdepan, Terluar, Tertinggal)
+                    dan kelompok masyarakat yang membutuhkan perhatian khusus.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Documents Section -->
+<section id="sumber" class="py-16 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Sumber Dokumen
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                AI Assistant kami dilatih menggunakan 22 dokumen resmi dari LPDP untuk memberikan 
+                informasi yang akurat dan terpercaya.
+            </p>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 md:p-8">
+            <div class="">
+                <!-- Dokumen Panduan -->
+                <div>
+                    <h3 class="text-xl font-semibold text-secondary-600 mb-6 text-center">Dokumen Panduan</h3>
+                    <div class="overflow-hidden rounded-xl shadow-sm border border-gray-200">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-secondary-100">
+                                <tr>
+                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-secondary-700 uppercase tracking-wider w-12">No</th>
+                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-secondary-700 uppercase tracking-wider">Nama Dokumen</th>
+                                    <th scope="col" class="px-4 py-3 text-right text-xs font-medium text-secondary-700 uppercase tracking-wider w-24">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">1</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Reguler</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536393.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">2</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Perguruan Tinggi Utama Dunia</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536384.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">3</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Parsial</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536371.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">4</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Penyandang Disabilitas</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536348.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">5</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Putera Puteri Papua</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536335.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">6</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Prasejahtera</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536322.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">7</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Daerah Afirmasi</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536312.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">8</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa PNS, TNI, POLRI</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536293.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">9</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Kewirausahaan</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536279.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">10</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Doktor untuk Talenta RISTEK</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751536249.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">11</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Program Double Degree/Joint Degree</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751362481.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">12</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Fellowship Dokter Spesialis</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751362174.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">13</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Dokter Spesialis dan Dokter Subspesialis</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751362088.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">14</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Pendidikan Kader Ulama</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1751362075.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">15</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa LPDP - Georgetown SFS Asia-Pacific Program Master 2025</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1749027826.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">16</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Bundling Prioritas LPDP-NUS BIZ Program Master</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1752496747.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">17</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Beasiswa Bundling Prioritas LPDР University of Dundee PhD Life Science</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1752144284.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">18</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Bundling Prioritas LPDP-UNSW Program Doktor</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1752144260.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">19</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Buku Panduan Beasiswa Bundling Prioritas LPDP-NTU Program Doktor</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/storage/beasiswa/kebijakan-umum/file/public_policy_file_1752144245.pdf" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">20</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Informasi Struktur Organisasi</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/en/tentang/struktur-organisasi/" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">21</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Overview LPDP</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/en/tentang/selayang-pandang/" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">22</td>
+                                    <td class="px-4 py-3 text-sm text-gray-700">LPDP Scholarship Policy in</td>
+                                    <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="https://lpdp.kemenkeu.go.id/en/beasiswa/kebijakan-umum/" target="_blank" class="text-secondary-600 hover:text-secondary-800 bg-secondary-50 hover:bg-secondary-100 px-3 py-1 rounded-full transition-colors">
+                                            <i class="fas fa-file-pdf mr-1"></i> Lihat
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Unduh Semua Dokumen Button -->
+            <div class="mt-8 flex justify-center">
+                <a href="#" onclick="alert('Fitur sedang dalam pengembangan. Silakan unduh dokumen satu per satu.'); return false;" 
+                   class="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-secondary-600 hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 transition-colors">
+                    <i class="fas fa-download mr-2"></i> Unduh Semua Dokumen
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About This Website -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Tentang Website Ini
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                LPDP Scholarship AI Assistant dikembangkan untuk membantu calon pelamar 
+                beasiswa LPDP mendapatkan informasi dengan cepat dan akurat.
+            </p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <p>
+                    Website ini dibuat menggunakan teknologi Retrieval-Augmented Generation (RAG) yang 
+                    menggabungkan kekuatan model bahasa AI dengan basis pengetahuan dari dokumen-dokumen 
+                    resmi LPDP. Tujuan utamanya adalah mempermudah calon pendaftar beasiswa LPDP untuk 
+                    mendapatkan informasi yang mereka butuhkan.
+                </p>
+                <p>
+                    AI Assistant kami dilatih khusus dengan 22 dokumen resmi dari LPDP, sehingga dapat 
+                    menjawab berbagai pertanyaan tentang persyaratan, proses pendaftaran, pembiayaan, 
+                    dan informasi lainnya terkait beasiswa LPDP 2025.
+                </p>
+                <p>
+                    Meskipun demikian, perlu diingat bahwa website ini <strong>bukanlah sumber informasi resmi</strong>. 
+                    Kami sangat menyarankan agar pengguna selalu memverifikasi informasi yang diperoleh melalui 
+                    <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" class="text-secondary-600 hover:underline">
+                        website resmi LPDP
+                    </a> atau menghubungi langsung tim LPDP untuk informasi yang paling akurat dan terbaru.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-secondary-500 text-white">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Siap Wujudkan Mimpi Studi Lanjut?
+        </h2>
+        <p class="text-lg mb-8 text-white opacity-90">
+            Dapatkan informasi lengkap tentang Beasiswa LPDP 2025 dan siapkan diri Anda 
+            untuk menjadi salah satu penerima beasiswa terbaik di Indonesia.
+        </p>
+        <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+            <a href="{{ url_for('chat') }}" 
+               class="inline-block bg-white text-secondary-600 font-semibold px-8 py-3 rounded-lg hover:bg-primary-500 hover:text-white transition-colors">
+                <i class="fas fa-comments mr-2"></i>Tanya AI Assistant
+            </a>
+            <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank"
+               class="inline-block border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-secondary-600 transition-colors">
+                <i class="fas fa-external-link-alt mr-2"></i>Kunjungi Website Resmi
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

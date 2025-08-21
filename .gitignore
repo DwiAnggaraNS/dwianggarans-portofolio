@@ -1,0 +1,127 @@
+# Data files
+*.csv
+*.parquet
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.vscode/
+
+# Large files
+*.zip
+*ny_taxi_postgres_data/
+*.tar.gz
+*fresh-copy/
+
+# Credentials & Secrets (CRITICAL!)
+**/credentials.json
+**/service-account*.json
+**/*-key.json
+**/*-keys*
+**/*-creds*
+**/*credentials*
+**/auth*.json
+.google/
+google-credentials/
+gcp-credentials/
+
+# Environment variables
+.env
+.env.*
+*.env
+.envrc
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.tfvars
+terraform.tfvars
+*.auto.tfvars
+
+# Airflow
+logs/
+.logs/
+airflow-webserver.pid
+airflow.cfg
+unittests.cfg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+venv_new/
+myenv/
+ENV/
+env/
+.env/
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Docker
+.dockerignore
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Executables
+*.exe
+*.msi
+*.dmg
+*.pkg
+
+# Logs
+*.log
+logs/
+log/
+
+# Cache
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+.backup/

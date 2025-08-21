@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}Chat AI - Beasiswa LPDP{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <i class="fas fa-robot text-secondary-500"></i>
+            Chat dengan AI Assistant
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Tanyakan apa saja tentang program Beasiswa LPDP 2025. 
+            AI kami menggunakan teknologi LangGraph untuk pengalaman yang lebih baik.
+        </p>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Chat Header -->
+        <div class="bg-secondary-500 text-white p-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-robot text-secondary-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">LPDP AI Assistant</h3>
+                        <p class="text-sm text-white opacity-80">
+                            Powered by LangGraph • Session: <span id="session-id">Loading...</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="loadChatHistory()" 
+                            class="text-white hover:text-primary-500 transition-colors"
+                            title="Muat riwayat percakapan">
+                        <i class="fas fa-history"></i>
+                    </button>
+                    <button onclick="clearChat()" 
+                            class="text-white hover:text-primary-500 transition-colors"
+                            title="Bersihkan percakapan">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-messages" class="h-96 overflow-y-auto p-4 space-y-4 bg-gray-50">
+            <!-- Welcome Message -->
+            <div class="chat-message">
+                <div class="flex items-start">
+                    <div class="w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <i class="fas fa-robot text-white text-xs"></i>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 shadow max-w-md">
+                        <p class="text-gray-800">
+                            Halo! 👋 Saya adalah AI Assistant untuk program Beasiswa LPDP 2025. 
+                            Saya menggunakan teknologi LangGraph untuk memberikan pengalaman yang lebih baik!
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            <i class="fas fa-info-circle mr-1"></i> Dengan state management dan continuity support
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suggested Questions -->
+        <div id="suggested-questions" class="p-4 border-t bg-white">
+            <p class="text-sm text-gray-600 mb-3">Pertanyaan yang mungkin Anda inginkan:</p>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="sendSuggestedQuestion('Apa itu Beasiswa LPDP?')" 
+                        class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm hover:bg-primary-200 transition-colors">
+                    Apa itu Beasiswa LPDP?
+                </button>
+                <button onclick="sendSuggestedQuestion('Dokumen apa saja yang perlu disiapkan?')" 
+                        class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm hover:bg-primary-200 transition-colors">
+                    Dokumen yang diperlukan
+                </button>
+                <button onclick="sendSuggestedQuestion('Jadwal pendaftaran LPDP 2025')" 
+                        class="bg-primary-100 text-secondary-700 px-3 py-1 rounded-full text-sm hover:bg-primary-200 transition-colors">
+                    Jadwal pendaftaran
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="p-4 border-t bg-white">
+            <form id="chat-form" class="flex space-x-3">
+                <div class="flex-1 relative">
+                    <input type="text" 
+                           id="message-input" 
+                           placeholder="Ketik pertanyaan Anda di sini..."
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent pr-10"
+                           autocomplete="off">
+                    <div id="char-counter" class="absolute right-2 top-2 text-xs text-gray-400"></div>
+                </div>
+                <button type="submit" 
+                        id="send-button"
+                        class="bg-secondary-500 text-white px-6 py-2 rounded-lg hover:bg-secondary-600 transition-colors flex items-center">
+                    <span id="send-text">
+                        <i class="fas fa-paper-plane mr-1"></i>Kirim
+                    </span>
+                    <span id="loading-text" class="hidden">
+                        <i class="fas fa-spinner fa-spin mr-1"></i>Mengirim...
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enhanced Tips Section -->
+    <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h3 class="font-semibold text-blue-800 mb-3">
+            <i class="fas fa-magic mr-2 text-blue-600"></i>Fitur Baru dengan LangGraph:
+        </h3>
+        <ul class="text-blue-800 space-y-1 text-sm">
+            <li>• <strong>State Management:</strong> Percakapan tersimpan otomatis dalam sesi</li>
+            <li>• <strong>Continuation Support:</strong> Ketik "lanjutkan" untuk melanjutkan jawaban</li>
+            <li>• <strong>Enhanced Retrieval:</strong> Pencarian dokumen yang lebih akurat</li>
+            <li>• <strong>Session Persistence:</strong> Riwayat percakapan tersimpan di database</li>
+            <li>• <strong>Monitoring:</strong> Kualitas jawaban dipantau dengan LangSmith</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full">
+            <h3 class="text-lg font-semibold mb-4">Berikan Feedback</h3>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Rating:</label>
+                <div class="flex space-x-2">
+                    <button onclick="setRating(1)" class="rating-btn px-3 py-1 border rounded" data-rating="1">1</button>
+                    <button onclick="setRating(2)" class="rating-btn px-3 py-1 border rounded" data-rating="2">2</button>
+                    <button onclick="setRating(3)" class="rating-btn px-3 py-1 border rounded" data-rating="3">3</button>
+                    <button onclick="setRating(4)" class="rating-btn px-3 py-1 border rounded" data-rating="4">4</button>
+                    <button onclick="setRating(5)" class="rating-btn px-3 py-1 border rounded" data-rating="5">5</button>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Komentar:</label>
+                <textarea id="feedback-comment" class="w-full px-3 py-2 border border-gray-300 rounded-lg" rows="3"></textarea>
+            </div>
+            <div class="flex justify-end space-x-2">
+                <button onclick="closeFeedbackModal()" class="px-4 py-2 text-gray-600 hover:text-gray-800">Batal</button>
+                <button onclick="submitFeedback()" class="px-4 py-2 bg-secondary-500 text-white rounded hover:bg-secondary-600">Kirim</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Load external JS file -->
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

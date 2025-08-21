@@ -1,0 +1,86 @@
+{
+  "President Director": "Andin Hadjyanto",
+  "Head of Internal Audit Unit": "Merzi Umas",
+  "Directorates": [
+    {
+      "Director": "Emmanuel Agust Hartono",
+      "Position": "Director of Finance and General Affairs",
+      "Divisions": [
+        {
+          "Head": "Juni Dearmanita Damanik",
+          "Division": "Head of Finance Division"
+        },
+        {
+          "Head": "Kingkin Rahayu Ningsih",
+          "Division": "Head of Human Resources and Information Technology Division"
+        },
+        {
+          "Head": "M. Lukmanul Hakim",
+          "Division": "Head of Legal and Communication Division"
+        },
+        {
+          "Head": "Juliandi Ricardo Sipayung",
+          "Division": "Head of Internal Compliance and Risk Management Division"
+        }
+      ]
+    },
+    {
+      "Director": "Muhammad Oriza",
+      "Position": "Director of Investment",
+      "Divisions": [
+        {
+          "Head": "Millennia Aulia Susanti",
+          "Division": "Head of Money Market Investment Division"
+        },
+        {
+          "Head": null,
+          "Division": "Head of Capital Market Investment Division"
+        },
+        {
+          "Head": "Librianto Kurniadi",
+          "Division": "Head of Asset Management and Settlement Division"
+        }
+      ]
+    },
+    {
+      "Director": "Dwi Larso",
+      "Position": "Director of Scholarship",
+      "Divisions": [
+        {
+          "Head": "Andar Ramona Sinaga",
+          "Division": "Head of Scholarship Admission Division"
+        },
+        {
+          "Head": "Gendro Hartono",
+          "Division": "Head of Scholarship Services Division"
+        },
+        {
+          "Head": "Juni Dearmanita Damanik (Plt.)",
+          "Division": "Head of Alumni and Talents Management Division"
+        },
+        {
+          "Head": "Agam Bayu Suryanto",
+          "Division": "Head of Scholarship Partnership and Program Development Division"
+        }
+      ]
+    },
+    {
+      "Director": "Ayom Widipaminto",
+      "Position": "Director of Research Facilitation",
+      "Divisions": [
+        {
+          "Head": "Dhani Setyawan",
+          "Division": "Head of Research Partnership and Program Development Division"
+        },
+        {
+          "Head": "Purwana",
+          "Division": "Head of Research Funding Division"
+        },
+        {
+          "Head": "Irmwati",
+          "Division": "Head of Research Funding Evaluation Division"
+        }
+      ]
+    }
+  ]
+}

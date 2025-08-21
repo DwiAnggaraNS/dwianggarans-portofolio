@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ - Magang Berdampak{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-primary-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Frequently Asked Questions
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                Temukan jawaban untuk pertanyaan yang paling sering diajukan 
+                tentang program Magang Berdampak.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Search -->
+<section class="py-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+            <input type="text" 
+                   id="faq-search" 
+                   placeholder="Cari pertanyaan atau kata kunci..."
+                   class="w-full px-6 py-4 pr-12 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+            <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Categories -->
+<section class="py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button onclick="filterFAQ('all')" 
+                    class="faq-filter active px-6 py-3 rounded-full font-medium transition-colors">
+                Semua
+            </button>
+            <button onclick="filterFAQ('pendaftaran')" 
+                    class="faq-filter px-6 py-3 rounded-full font-medium transition-colors">
+                Pendaftaran
+            </button>
+            <button onclick="filterFAQ('persyaratan')" 
+                    class="faq-filter px-6 py-3 rounded-full font-medium transition-colors">
+                Persyaratan
+            </button>
+            <button onclick="filterFAQ('program')" 
+                    class="faq-filter px-6 py-3 rounded-full font-medium transition-colors">
+                Program
+            </button>
+            <button onclick="filterFAQ('manfaat')" 
+                    class="faq-filter px-6 py-3 rounded-full font-medium transition-colors">
+                Manfaat
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Content -->
+<section class="py-8 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-4" id="faq-container">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="program">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Apa itu program Magang Berdampak?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <p class="text-gray-700">
+                        Program Magang Berdampak adalah inisiatif Kementerian Pendidikan yang memberikan 
+                        kesempatan kepada mahasiswa untuk melakukan magang terstruktur di berbagai 
+                        instansi pemerintah dan perusahaan swasta. Program ini dirancang untuk memberikan 
+                        pengalaman kerja nyata yang selaras dengan bidang studi mahasiswa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="persyaratan">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Apa saja persyaratan untuk mengikuti program ini?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="text-gray-700">
+                        <p class="mb-3">Persyaratan umum untuk mengikuti Program Magang Berdampak:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Mahasiswa aktif minimal semester 5</li>
+                            <li>IPK minimal 3.0 pada skala 4.0</li>
+                            <li>Memiliki surat rekomendasi dari kampus</li>
+                            <li>Sehat jasmani dan rohani</li>
+                            <li>Berkomitmen mengikuti program hingga selesai</li>
+                            <li>Lulus tahap seleksi administrasi dan wawancara</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Bagaimana cara mendaftar Magang Berdampak?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="text-gray-700">
+                        <p class="mb-3">Langkah-langkah pendaftaran:</p>
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li>Kunjungi website resmi program Magang Berdampak</li>
+                            <li>Buat akun dengan menggunakan email aktif</li>
+                            <li>Lengkapi profil dan data diri</li>
+                            <li>Upload dokumen yang diperlukan (CV, transkrip, surat rekomendasi)</li>
+                            <li>Pilih posisi magang yang sesuai dengan minat dan jurusan</li>
+                            <li>Submit aplikasi dan tunggu proses seleksi</li>
+                            <li>Ikuti tahap seleksi yang meliputi tes tertulis dan wawancara</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="program">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Berapa lama durasi program magang?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <p class="text-gray-700">
+                        Durasi program magang bervariasi tergantung pada jenis program dan kebijakan 
+                        mitra. Umumnya berkisar antara 3-6 bulan. Beberapa program khusus dapat 
+                        berlangsung hingga 1 tahun dengan berbagai tahapan pengembangan kompetensi.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="manfaat">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Apa manfaat mengikuti program ini?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="text-gray-700">
+                        <p class="mb-3">Manfaat yang akan Anda peroleh:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Pengalaman kerja nyata di lingkungan profesional</li>
+                            <li>Pengembangan soft skills dan hard skills</li>
+                            <li>Networking dengan profesional industri</li>
+                            <li>Sertifikat kompetensi yang diakui industri</li>
+                            <li>Peluang mendapat tawaran kerja dari perusahaan mitra</li>
+                            <li>Bimbingan dari mentor berpengalaman</li>
+                            <li>Pemahaman mendalam tentang dunia kerja</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="pendaftaran">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Kapan periode pendaftaran dibuka?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <p class="text-gray-700">
+                        Pendaftaran biasanya dibuka dua kali dalam setahun, yaitu:
+                        <br>• <strong>Periode 1:</strong> Januari - Februari (untuk semester genap)
+                        <br>• <strong>Periode 2:</strong> Juli - Agustus (untuk semester ganjil)
+                        <br><br>
+                        Pantau terus website resmi dan media sosial program untuk informasi 
+                        pendaftaran terbaru.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="program">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Dimana saja tempat magang yang tersedia?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <div class="text-gray-700">
+                        <p class="mb-3">Tempat magang tersebar di berbagai sektor:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Instansi Pemerintah:</strong> Kementerian, BUMN, Pemda</li>
+                            <li><strong>Perusahaan Swasta:</strong> Startup, korporasi multinasional</li>
+                            <li><strong>NGO/Organisasi Nirlaba:</strong> Yayasan, lembaga sosial</li>
+                            <li><strong>Industri Kreatif:</strong> Media, teknologi, desain</li>
+                            <li><strong>Sektor Pendidikan:</strong> Universitas, lembaga penelitian</li>
+                        </ul>
+                        <p class="mt-3">
+                            Lokasi tersebar di seluruh Indonesia dengan konsentrasi di kota-kota besar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item bg-gray-50 rounded-xl overflow-hidden" data-category="manfaat">
+                <button class="faq-question w-full text-left p-6 hover:bg-gray-100 transition-colors" 
+                        onclick="toggleFAQ(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                            Apakah ada bantuan finansial untuk peserta?
+                        </h3>
+                        <i class="fas fa-chevron-down text-gray-500 transform transition-transform"></i>
+                    </div>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6">
+                    <p class="text-gray-700">
+                        Ya, program ini menyediakan berbagai bentuk dukungan finansial:
+                        <br>• <strong>Tunjangan bulanan</strong> sesuai standar regional
+                        <br>• <strong>Bantuan transportasi</strong> untuk mobilitas harian
+                        <br>• <strong>Asuransi kesehatan</strong> selama periode magang
+                        <br>• <strong>Bantuan akomodasi</strong> untuk peserta dari luar kota (terbatas)
+                        <br><br>
+                        Besaran bantuan bervariasi tergantung lokasi dan jenis program magang.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add a link to sources at the bottom of FAQ -->
+        <div class="text-center mt-10 pt-8 border-t border-gray-200">
+            <p class="text-gray-600">
+                Semua informasi pada halaman ini bersumber dari dokumen resmi LPDP.
+                <a href="{{ url_for('about', _anchor='sumber') }}" class="text-secondary-600 hover:underline">
+                    <i class="fas fa-external-link-alt mr-1"></i>Lihat daftar lengkap dokumen sumber
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Support -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Masih Ada Pertanyaan?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+            Jika Anda tidak menemukan jawaban yang dicari, jangan ragu untuk 
+            menghubungi AI Assistant kami atau tim support.
+        </p>
+        <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+            <a href="{{ url_for('chat') }}" 
+               class="inline-block bg-primary-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors">
+                <i class="fas fa-robot mr-2"></i>Chat dengan AI Assistant
+            </a>
+            <a href="mailto:support@magangberdampak.id" 
+               class="inline-block border-2 border-primary-600 text-primary-600 font-semibold px-8 py-3 rounded-lg hover:bg-primary-600 hover:text-white transition-colors">
+                <i class="fas fa-envelope mr-2"></i>Email Support
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // FAQ functionality
+    function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(faq => {
+            if (faq !== answer && !faq.classList.contains('hidden')) {
+                faq.classList.add('hidden');
+                faq.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        // Toggle current FAQ
+        answer.classList.toggle('hidden');
+        icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+    
+    // Filter FAQs by category
+    function filterFAQ(category) {
+        const items = document.querySelectorAll('.faq-item');
+        const filters = document.querySelectorAll('.faq-filter');
+        
+        // Update filter buttons
+        filters.forEach(filter => {
+            filter.classList.remove('active');
+            if (filter.textContent.toLowerCase().includes(category) || category === 'all') {
+                filter.classList.add('active');
+            }
+        });
+        
+        // Update active filter button
+        event.target.classList.add('active');
+        
+        // Show/hide FAQ items
+        items.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    // Search functionality
+    document.getElementById('faq-search').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const items = document.querySelectorAll('.faq-item');
+        
+        items.forEach(item => {
+            const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+            const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+            
+            if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+    
+    // Style filter buttons
+    document.addEventListener('DOMContentLoaded', function() {
+        const filters = document.querySelectorAll('.faq-filter');
+        
+        filters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                filters.forEach(f => f.classList.remove('active', 'bg-primary-600', 'text-white'));
+                filters.forEach(f => f.classList.add('bg-gray-200', 'text-gray-700'));
+                
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.classList.add('active', 'bg-primary-600', 'text-white');
+            });
+        });
+        
+        // Set initial state
+        document.querySelector('.faq-filter.active').classList.add('bg-primary-600', 'text-white');
+        filters.forEach(f => {
+            if (!f.classList.contains('active')) {
+                f.classList.add('bg-gray-200', 'text-gray-700');
+            }
+        });
+    });
+</script>
+{% endblock %}

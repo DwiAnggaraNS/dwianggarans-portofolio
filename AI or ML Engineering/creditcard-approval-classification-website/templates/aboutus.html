@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaloRek's About Us</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/Logo1.png') }}" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" >
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/testimonials/testimonial-3/assets/css/testimonial-3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        #btn-model-navbar{
+          border-radius: 18px;
+          background-color: #E6DE01;
+          color: #002D62;
+          margin: 5px;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+        }
+        #hr-line{
+            height: 5px; 
+            border: 0; 
+            border-top: 3px solid black!important; 
+            border-radius: 20px;
+            width: 25%;
+            margin: auto;
+        }
+        html, body {
+                overflow-x: hidden;
+        }
+        @media (max-width: 768px) {
+          #btn-model-navbar{
+            background-color: #002D62;
+            border: 0px;
+            color: #E6DE01;
+          }
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100" style="padding: 0; margin: 0;">
+    <main class="flex-shrink-0" tyle="padding: 0; margin: 0;">
+        <nav class="navbar navbar-expand-lg" style="background-color: #002D62;">
+          <div class="container px-5">
+            <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo" width="150"  class="d-inline-block align-text-top" style="margin-left: 20px;" id="logo" href="landingpage.html">
+                <button class="navbar-toggler" style="background-color: #E6DE01 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}" style="color:#F6F9FF; margin:5px">Laman</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('aboutus') }}" style="color:#F6F9FF; margin:5px">Tentang</a></li>
+                        <li class="nav-item"><a class="nav-link" id="btn-model-navbar" href="{{ url_for('model') }}">Model Kami</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            </nav>     
+        <div class="row" style="background-color: white;">
+            <!-- Testimonial 3 - Bootstrap Brain Component -->
+            <section class="py-4 py-xl-5">
+                <div class="container">
+                <div class="container overflow-hidden">
+                  <h3 class="h3 text-center"><strong>Profil Tim HaloRek</strong></h3>
+                  <hr id="hr-line">
+                  <div class="row gy-4 gy-md-0 gx-xxl-5" >
+                    <div class="col-12 col-md-4">
+                      <div class="card border-0 border-bottom border-primary shadow-sm">
+                        <div class="card-body p-4 p-xxl-5"overflow-auto>
+                          <figure>
+                            <img class="img-fluid" loading="lazy" src="{{ url_for('static', filename='assets/dwi.jpg') }}" style="margin-bottom: 10px; border-radius: 20px;" alt="Picture of Dwi">
+                            <figcaption>
+                              <h4 class="mb-2">Dwi Anggara Najwan Sugama</h4>
+                              <h5 class="fs-6 text-secondary mb-0">Teknologi Rekayasa Perangkat Lunak</h5>
+                              <h5 class="fs-6 text-secondary mb-0">Angkatan 2023</h5>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="card border-0 border-bottom border-primary shadow-sm">
+                        <div class="card-body p-4 p-xxl-5" overflow-auto >
+                          <figure>
+                            <img class="img-fluid" loading="lazy" src="{{ url_for('static', filename='assets/natha.jpg') }}" style="margin-bottom: 10px; border-radius: 20px;" alt="Picture of Dwi">
+                            <figcaption>
+                              <h4 class="mb-2">Muhammad Natha Ulinnuha </h4>
+                              <h5 class="fs-6 text-secondary mb-0">Ilmu Komputer</h5>
+                              <h5 class="fs-6 text-secondary mb-0">Angkatan 2023</h5>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="card border-0 border-bottom border-primary shadow-sm">
+                        <div class="card-body p-4 p-xxl-5" overflow-auto>
+                          <figure>
+                            <img class="img-fluid" loading="lazy" src="{{ url_for('static', filename='assets/apip.png') }}" style="margin-bottom: 10px; border-radius: 20px;" alt="Picture of Dwi">
+                            <figcaption>
+                              <h4 class="mb-2">Naufal Afif Bauw</h4>
+                              <br>
+                              <h5 class="fs-6 text-secondary mb-0">Ilmu Komputer</h5>
+                              <h5 class="fs-6 text-secondary mb-0">Angkatan 2023</h5>
+                            </figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
+        <section class="py-0" style='background-color: #F6F9FF;'>
+            <div class="container px-5 py-0">
+                <br>
+                <h3 class="h3 text-center"><strong>Filosofi Logo</strong></h3>
+                <hr id="hr-line">
+                <div class="row gx-5 row-cols-1 row-cols-md-3" style="margin-left: 10px; margin-right: 10px;">
+                    <div class="col mb-5 h-50 w-33">
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='assets/Logo1.png') }}" alt="" class="img-fluid mb-4" style="width: 80%;">
+                            <p style="font-weight: 600;">Logo berbentuk tangan yang dimiringkan menyimbolkan gestur sapaan yang mencerminkan nama service kami - “HaloRek”</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5 h-50 w-33">
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='assets/Logo2.png') }}" alt="" class="img-fluid mb-4" style="width: 80%;">
+                            <p style="font-weight: 600;">Lingkaran-lingkaran dan garis yang menghubungkan serta 3 jari yang membentuk graf menyimbolkan “Data Science”</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5 h-50 w-33">
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='assets/Logo3.png') }}" alt="" class="img-fluid" style="width: 80%;">
+                            <p style="font-weight: 600;">Telapak tangan yang bergaris dengan lingkaran besar di tengah menyimbolkan bentuk electronic chip pada credit card atau EMV chips</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-4 mt-auto" style="background-color: #002D62;">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; HaloRek 2024</div></div>
+            </div>
+        </div>
+    </footer>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+</body>
+</html>

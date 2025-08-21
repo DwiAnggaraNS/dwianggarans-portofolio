@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LPDP Scholarship AI Assistant{% endblock %}</title>
+    <!-- Add in the head section -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.0.6/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff8e6',
+                            100: '#feecb3',
+                            500: '#ffd300',
+                            600: '#e6be00',
+                            700: '#cca900',
+                            900: '#997e00'
+                        },
+                        secondary: {
+                            50: '#fef2e6',
+                            100: '#fad8b3',
+                            500: '#eb6110',
+                            600: '#d4550e',
+                            700: '#bd4c0d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styles -->
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #ffd300 0%, #eb6110 100%);
+        }
+        .chat-message {
+            animation: fadeInUp 0.3s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Disclaimer Banner -->
+    <div class="bg-yellow-100 border-b border-yellow-200 text-yellow-800 px-4 py-2 text-center text-sm">
+        <strong>Disclaimer:</strong> Website ini <span class="font-bold">BUKAN</span> situs resmi LPDP. Untuk informasi resmi, kunjungi 
+        <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" class="text-secondary-600 underline hover:text-secondary-700">
+            lpdp.kemenkeu.go.id
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="{{ url_for('index') }}" class="flex items-center">
+                        <i class="fas fa-graduation-cap text-secondary-500 text-2xl mr-3"></i>
+                        <span class="text-xl font-bold text-gray-900">LPDP Scholarship</span>
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="{{ url_for('index') }}" 
+                           class="text-gray-700 hover:text-secondary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            <i class="fas fa-home mr-1"></i>Beranda
+                        </a>
+                        <a href="{{ url_for('chat') }}" 
+                           class="text-gray-700 hover:text-secondary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            <i class="fas fa-comments mr-1"></i>Chat AI
+                        </a>
+                        <a href="{{ url_for('about') }}" 
+                           class="text-gray-700 hover:text-secondary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            <i class="fas fa-info-circle mr-1"></i>Tentang
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" 
+                            class="text-gray-700 hover:text-secondary-500 focus:outline-none focus:text-secondary-500">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+                <a href="{{ url_for('index') }}" 
+                   class="text-gray-700 hover:text-secondary-500 block px-3 py-2 rounded-md text-base font-medium">
+                    <i class="fas fa-home mr-2"></i>Beranda
+                </a>
+                <a href="{{ url_for('chat') }}" 
+                   class="text-gray-700 hover:text-secondary-500 block px-3 py-2 rounded-md text-base font-medium">
+                    <i class="fas fa-comments mr-2"></i>Chat AI
+                </a>
+                <a href="{{ url_for('about') }}" 
+                   class="text-gray-700 hover:text-secondary-500 block px-3 py-2 rounded-md text-base font-medium">
+                    <i class="fas fa-info-circle mr-2"></i>Tentang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} bg-{{ 'green' if category == 'success' else 'red' }}-100 border border-{{ 'green' if category == 'success' else 'red' }}-400 text-{{ 'green' if category == 'success' else 'red' }}-700 px-4 py-3 rounded mb-4">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-lg font-semibold mb-4">LPDP Scholarship AI Assistant</h3>
+                    <p class="text-gray-300 mb-4">
+                        Platform AI yang membantu calon pelamar beasiswa LPDP mendapatkan informasi lengkap
+                        tentang program beasiswa LPDP tahun 2025.
+                    </p>
+                    <div class="bg-gray-700 p-3 rounded-lg text-sm text-gray-300 mb-4">
+                        <p class="font-bold mb-1">Disclaimer:</p>
+                        <p>Website ini BUKAN situs resmi LPDP dan tidak berafiliasi dengan Lembaga Pengelola Dana Pendidikan.
+                           Informasi resmi dapat ditemukan di <a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" class="text-primary-500 hover:underline">situs resmi LPDP</a>.
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/lpdp.ri" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://twitter.com/LPDP_RI" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="https://www.instagram.com/lpdp_ri/" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://www.youtube.com/c/LPDPRIofficial" target="_blank" class="text-gray-300 hover:text-white"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{{ url_for('index') }}" class="text-gray-300 hover:text-white">Beranda</a></li>
+                        <li><a href="{{ url_for('chat') }}" class="text-gray-300 hover:text-white">Chat AI</a></li>
+                        <li><a href="{{ url_for('about') }}" class="text-gray-300 hover:text-white">Tentang</a></li>
+                        <li><a href="https://lpdp.kemenkeu.go.id/en/" target="_blank" class="text-gray-300 hover:text-white">Situs Resmi LPDP</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Dokumen Sumber</h3>
+                    <p class="text-gray-400 text-sm mb-2">
+                        Website ini menggunakan 22 dokumen resmi dari LPDP sebagai sumber pengetahuan.
+                    </p>
+                    <p class="text-gray-300 text-sm">
+                        <a href="{{ url_for('about') }}#sumber" class="text-primary-400 hover:underline">Lihat daftar lengkap dokumen</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2024 LPDP Scholarship AI Assistant. 
+                    Dikembangkan untuk membantu calon penerima beasiswa LPDP.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto-hide flash messages
+        setTimeout(function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                    alert.remove();
+                }, 500);
+            });
+        }, 5000);
+        
+        // Handle anchor links with smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if URL contains anchor
+            if (window.location.hash) {
+                const anchor = window.location.hash.substring(1);
+                const element = document.getElementById(anchor);
+                
+                if (element) {
+                    // Delay a bit to ensure page is fully loaded
+                    setTimeout(function() {
+                        element.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            }
+            
+            // Add smooth scrolling to all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update URL without reloading page
+                        history.pushState(null, null, '#' + targetId);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Add before closing </body> tag -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

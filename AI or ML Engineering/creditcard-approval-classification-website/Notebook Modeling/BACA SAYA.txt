@@ -1,0 +1,8 @@
+Panduan Penggunaan Notebook
+
+Notebook ini berisi detail lengkap mengenai proses pembuatan model machine learning tim HaloRek.
+
+Catatan:
+
+-Gambar Eksternal: Notebook ini menggunakan beberapa gambar yang disimpan di GitHub untuk memperjelas visualisasi data dan hasil model.
+-Koneksi Internet: Pastikan pihak panitia atau juri ICONIC terhubung ke internet saat membuka notebook ini agar semua gambar dapat dimuat dengan benar. Jika tidak, tampilan notebook mungkin tidak sesuai dengan yang diharapkan.
