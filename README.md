@@ -65,7 +65,7 @@ Full-stack applications and mobile development projects showcasing software engi
 - **Scale**: 1st out of 12 national finalists (from 57+ teams)
 - **Awarded by**: Universitas Pelita Harapan (UPH) & Qatar Airways
 - [🎨 View Winning Infographic](https://drive.google.com/file/d/1nPFPq7h0SvCGwUQta0J9imdgftsx0PFK/view?usp=sharing)
-- [📁 EDA Project](./Data%20Science/EDA%20&%20Clustering%20Qatar%20Airways%20Customer%20Review%20Dataset/)
+- [📁 EDA & Clustering Project](./Data%20Science/EDA%20&%20Clustering%20Qatar%20Airways%20Customer%20Review%20Dataset/)
 - [📁 Time Series Project](./Data%20Science/Time%20Series%20Forecasting%20Average%20Rating%20Qatar%20Customer%20Review%20Dataset/)
 
 ### 🚀 Technical Excellence Projects
@@ -106,7 +106,7 @@ Full-stack applications and mobile development projects showcasing software engi
 ### Programming Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white)
 
 ### AI & Machine Learning
