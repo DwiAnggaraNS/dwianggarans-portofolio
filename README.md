@@ -4,7 +4,7 @@
 
 📍 Kabupaten Sleman, Daerah Istimewa Yogyakarta, Indonesia  
 📧 dwianggarans@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/dwianggarans) | [GitHub](https://github.com/dwianggarans)
+🔗 [LinkedIn](https://www.linkedin.com/in/dwi-anggara-najwan-sugama/) | [GitHub](https://github.com/dwianggarans)
 
 ---
 
@@ -208,7 +208,7 @@ Full-stack applications and software development projects:
 I'm always interested in discussing technology, data science, and innovative projects. Feel free to reach out!
 
 - 📧 **Email**: dwianggarans@gmail.com
-- 💼 **LinkedIn**: [linkedin.com/in/dwianggarans](https://linkedin.com/in/dwianggarans)
+- 💼 **LinkedIn**: [linkedin.com/in/dwianggarans](https://www.linkedin.com/in/dwi-anggara-najwan-sugama/)
 - 🔗 **GitHub**: [github.com/dwianggarans](https://github.com/dwianggarans)
 - 🎓 **Institution**: Universitas Gadjah Mada
 
