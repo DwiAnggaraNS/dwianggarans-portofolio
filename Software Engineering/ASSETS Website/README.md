@@ -20,6 +20,8 @@
 
 ASSETS Website is a semester-long simulated project aimed at building an inclusive and interactive website for the Association of Software Engineering Technology Students (ASSETS) UGM. This website is developed as an information platform and data management system for student organizations with comprehensive features for both admin and user.
 
+Go to [📖 Official Repository](https://github.com/nadznaf/PAD1_Web-ASSETS)
+
 **Development Period:** August 2024 - December 2024
 
 ## 👥 Development Team
