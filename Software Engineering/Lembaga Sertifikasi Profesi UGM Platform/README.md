@@ -272,7 +272,6 @@ PAD-LSP-UGM/
 | **UI/UX Designer** | Zhazha | Interface design, user experience optimization |
 | **Frontend Developer** | Nadzira (Nafa) | Frontend implementation, responsive design |
 | **Fullstack Developer** | Dwi | Full-stack development, system integration |
-| **Backend Developer** | Annisa | API development, database optimization, system architecture |
 
 > **Note**: This project is currently in **Phase 3** development with a different team continuing the enhancement work. 
 
