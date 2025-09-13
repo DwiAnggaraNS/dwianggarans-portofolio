@@ -17,18 +17,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
-- [Team](#team)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## 🎯 About
 
 LSP UGM is a comprehensive web-based professional certification platform designed specifically for Universitas Gadjah Mada. The system streamlines the certification process for various stakeholders while maintaining compliance with **Badan Nasional Sertifikasi Profesi (BNSP)** standards.
