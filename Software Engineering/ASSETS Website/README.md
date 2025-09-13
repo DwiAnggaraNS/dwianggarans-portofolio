@@ -206,13 +206,12 @@ PAD1_Web-ASSETS/
 
 ## 🎯 Key Contributions
 
-### Backend Development (Nadzira)
+### Backend Development (Dwi)
 - **Database Design**: Comprehensive ERD (Entity Relationship Diagram) design
 - **Migration System**: Created 12+ migration files for database structure
 - **Documentation**: 
   - Data Flow Diagram (DFD)
   - Sequence Diagram
-  - Backend API documentation
   - Route documentation
   - Variable documentation for frontend integration
 - **User Section Backend**: Complete implementation using Laravel
