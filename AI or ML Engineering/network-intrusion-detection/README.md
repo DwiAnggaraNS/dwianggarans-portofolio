@@ -34,7 +34,7 @@
 
 ### 🎓 Competition Context
 
-This project was developed for and won the **National AI Competition Indonesia 2025**, where it outperformed competing solutions in both technical implementation and practical applicability to real-world cybersecurity challenges.
+This project was developed for and won the [**ICONIC IT Data Science Competition 2025**](https://www.instagram.com/p/DP2tAGGEnM7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==), where it outperformed competing solutions in both technical implementation and practical applicability to real-world cybersecurity challenges.
 
 ### 💡 Innovation Highlights
 
@@ -537,7 +537,7 @@ The system can detect and classify the following attack types:
 
 ## 🤝 Contributing
 
-This is an educational project developed for the National AI Competition Indonesia 2025. While the repository is primarily for documentation and demonstration purposes, feedback and suggestions are welcome.
+This is an educational project developed for the [**ICONIC IT Data Science Competition 2025**](https://www.instagram.com/p/DP2tAGGEnM7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==). While the repository is primarily for documentation and demonstration purposes, feedback and suggestions are welcome.
 
 For questions or collaboration inquiries, please contact:
 - **Dwi Anggara Najwan Sugama** - Team Leader & Lead Developer
@@ -558,7 +558,7 @@ This project is developed for **educational purposes** and competition use. All 
 
 ## 🏆 Acknowledgments
 
-- **National AI Competition Indonesia 2025** - For providing the platform to showcase this innovation
+- [**ICONIC IT Data Science Competition 2025**](https://www.instagram.com/p/DP2tAGGEnM7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) - For providing the platform to showcase this innovation
 - **Groq** - For providing the LLM API used in mitigation recommendations
 - **UNSW-NB15 Dataset** - For training data foundation
 - **Open Source Community** - For the excellent tools and libraries
