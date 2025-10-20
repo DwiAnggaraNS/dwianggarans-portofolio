@@ -25,7 +25,6 @@
 - [Quick Start](#-quick-start)
 - [Project Repositories](#-project-repositories)
 - [Documentation](#-documentation)
-- [Citation](#-citation)
 
 ---
 
@@ -579,22 +578,6 @@ This project is developed for **educational purposes** and competition use. All 
 - Dwi Anggara Najwan Sugama - Team Leader, Data Scientist, Fullstack Developer
 - Muhamad Fahrul Razi - Fullstack Developer, DevOps Engineer  
 - Nino Auliya Nahara - Data Scientist
-
----
-
-## 📖 Citation
-
-If you use this project in your research or work, please cite:
-
-```bibtex
-@software{cyberguard_ai_2025,
-  title={CyberGuard AI: Network Intrusion Detection with Two-Stage ML and LLM-Powered Mitigation},
-  author={Sugama, Dwi Anggara Najwan and Razi, Muhamad Fahrul and Nahara, Nino Auliya},
-  year={2025},
-  note={Winner of 1st Place, National AI Competition Indonesia 2025},
-  url={https://github.com/fahrulrzi/halorek}
-}
-```
 
 ---
 
