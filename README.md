@@ -10,7 +10,7 @@
 
 ## About Me 🎯
 
-An accomplished 5th-semester Software Engineering student (GPA: 3.95/4.00) and a two-time 1st place winner in national AI competitions. Eager to secure an internship or entry-level role as an AI, Backend, or Data Engineer in Japan to apply a strong foundation in data-driven software solutions and contribute to an innovative technology environment. 
+An accomplished 5th-semester Software Engineering student (GPA: 3.96/4.00) and a two-time 1st place winner in national AI competitions. Eager to secure an internship or entry-level role as an AI, Backend, or Data Engineer in Japan to apply a strong foundation in data-driven software solutions and contribute to an innovative technology environment. 
 
 ### Academic Excellence 📚
 - **Current GPA**: 3.95/4.00
